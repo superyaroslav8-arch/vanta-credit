@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>VantaCredit — официальное зачисление игровой валюты</title>
+  <meta name="description" content="VantaCredit — бесплатный интерфейс без рекламы. Только официально разрешённые разработчиками методы зачисления виртуальной валюты.">
+  <meta name="theme-color" content="#0b0d12">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">Vanta<span>Credit</span></div>
+      <button id="howItWorksBtn" class="btn-how" type="button">Как это работает?</button>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="container">
+      <section id="formSection" class="card">
+        <h1>Зачисление виртуальной валюты</h1>
+        <p class="subtitle">Только официально разрешённые разработчиками методы.<br>Бесплатно и без рекламы.</p>
+
+        <form id="topupForm" novalidate>
+          <div class="form-group">
+            <label for="gameSearch">Выберите игру</label>
+            <input type="text" id="gameSearch" placeholder="Поиск игры..." autocomplete="off" aria-label="Поиск игры">
+            <select id="gameSelect" required size="7" aria-label="Список игр">
+              <option value="" disabled selected>Выберите игру из списка</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="nickname">Игровой никнейм / ID</label>
+            <input type="text" id="nickname" placeholder="Введите ник или официальный идентификатор" required minlength="2" maxlength="64" autocomplete="off">
+          </div>
+
+          <div class="form-group">
+            <label for="amount">Количество <span id="currencyName">валюты</span></label>
+            <input type="number" id="amount" placeholder="Введите количество" required min="1" max="1000000" inputmode="numeric">
+          </div>
+
+          <button type="submit" id="submitBtn" class="btn-primary">Зачислить</button>
+        </form>
+      </section>
+
+      <section id="resultSection" class="card result-card" hidden>
+        <div id="resultContent"></div>
+        <button id="againBtn" class="btn-primary" type="button">Зачислить ещё</button>
+      </section>
+
+      <section class="card history-card">
+        <h2>История операций</h2>
+        <div id="historyList" class="history-list">
+          <p class="empty-history">Пока нет операций</p>
+        </div>
+        <button id="clearHistoryBtn" class="btn-secondary" type="button" hidden>Очистить историю</button>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>VantaCredit — бесплатно и без рекламы. Используются только официально разрешённые разработчиками механизмы.</p>
+      <p class="small">Если у игры нет публичного API или gift-code системы от разработчика — автоматическое зачисление недоступно.</p>
+    </div>
+  </footer>
+
+  <div id="howModal" class="modal" hidden>
+    <div class="modal-content" role="dialog" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeModal" type="button" aria-label="Закрыть">&times;</button>
+      <h2 id="modalTitle">Как это работает?</h2>
+      <ol class="steps">
+        <li>Выберите игру</li>
+        <li>Укажите игровой никнейм</li>
+        <li>Выберите количество</li>
+        <li>Запустите операцию</li>
+        <li>Получите результат</li>
+      </ol>
+      <p class="modal-note">Сайт использует только официально разрешённые разработчиками способы работы с виртуальной валютой. Если такого механизма нет — операция будет корректно отклонена с объяснением.</p>
+      <button id="gotItBtn" class="btn-primary" type="button">Понятно</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
