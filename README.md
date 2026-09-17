@@ -1,2 +1,27 @@
-# vanta-credit
-VantaCredit — premium free interface for official game currency operations. No ads.
+# VantaCredit
+
+**VantaCredit** — премиальный бесплатный интерфейс без рекламы для официального зачисления игровой валюты.
+
+Только официально разрешённые разработчиками методы. Никаких фиктивных «Готово».
+
+## Ссылки
+
+- **Репозиторий:** https://github.com/superyaroslav8-arch/vanta-credit
+- **Сайт (GitHub Pages):** https://superyaroslav8-arch.github.io/vanta-credit/
+
+## Как опубликовать (1 клик)
+
+1. Открой репозиторий → **Settings** → **Pages**
+2. Source → **GitHub Actions** (или Deploy from a branch → `main` / root)
+3. Готово. Через 1–2 минуты сайт будет доступен.
+
+Workflow уже настроен (`.github/workflows/pages.yml`).
+
+## Что внутри
+
+- Модалка «Как это работает?» при первом визите + постоянная кнопка
+- Поиск игр + автосмена названия валюты
+- Реальная проверка: если официального API нет — честное сообщение о недоступности
+- История операций
+- Полностью адаптивный дизайн (iPhone / iPad / десктоп)
+- Без рекламы, без бэкенда, без фейков
